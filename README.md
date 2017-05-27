@@ -7,6 +7,7 @@ Analysis and Prediction of Auto MPG using Linear Regression
 # Data
 The file contains attributes of different cars including mpg
 Sample of data looks like below
+
 |mpg|  cylinders|  displacement| horsepower|  weight  |acceleration|  model year| origin |car name|
 |---|-----------|--------------|-----------|----------|------------|------------|--------|--------|
 |18.0|          8|         307.0|      130.0|  3504.0|          12.0|          70| 1  |chevrolet chevelle malibu  |
