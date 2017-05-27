@@ -30,4 +30,5 @@ Below is a plot of the actual MPG vs. the predicted MPG
 
 # Model Error Metrics
 Mean Squared Error (MSE) is **18.7809397346**. MSE is in mpg squared
+
 Root Mean Squared Error (RMSE) is **4.33369815915**. RMSE is in in mpg
