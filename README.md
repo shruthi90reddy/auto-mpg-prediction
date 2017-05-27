@@ -20,5 +20,4 @@ Data was downloaded from University of California Irvine https://archive.ics.uci
 
 # Analysis
 Looking at the image below. You will see all the correlations
-![Correlations with MPG] corr.png
-
+![](corr.png)
