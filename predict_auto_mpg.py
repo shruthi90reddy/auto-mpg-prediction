@@ -7,6 +7,8 @@ author: Tamby Kaghdo
 import pandas as pd
 import sys
 import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 def create_scatter_plot(df):
     """
@@ -40,6 +42,28 @@ def main():
     auto_df = pd.read_table("data/auto-mpg.data", delim_whitespace=True, names=auto_columns)
     print(auto_df.head())
     #create_scatter_plot(auto_df)
+
+    lr = LinearRegression()
+    lr.fit(auto_df[["weight"]], auto_df["mpg"])
+
+    mpg_predictions = lr.predict(auto_df[["weight"]])
+
+    plt.scatter(auto_df["weight"], auto_df["mpg"], color="green")
+    plt.scatter(auto_df["weight"], mpg_predictions, color="blue")
+    plt.ylabel('weight')
+    plt.xlabel('mpg actual (green). mpg prediction (blue)')
+    plt.title("Actual MPG vs. Predicted MPG")
+
+    #plt.show()
+
+    # MSE will be in mpg squared
+    mse = mean_squared_error(auto_df["mpg"], mpg_predictions)
+    print(mse)
+
+    #RMSE in mpg
+    rmse = mse ** (1/2)
+    print(rmse)
+
 
 if __name__ == "__main__":
     sys.exit(0 if main() else 1)
